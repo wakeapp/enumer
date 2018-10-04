@@ -1,0 +1,18 @@
+{
+    "name":        "wakeapp/enumer",
+    "description": "Provides possibility for enum",
+    "type":        "library",
+    "keywords":    ["unique-id", "enumer"],
+    "license":     "proprietary",
+
+    "require": {
+        "php": "~7.0",
+        "ext-mbstring": "*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Wakeapp\\Component\\Enumer\\": "src/"
+        }
+    }
+}
