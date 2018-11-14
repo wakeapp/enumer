@@ -7,17 +7,19 @@ namespace Wakeapp\Component\Enumer;
 use ReflectionClass;
 use ReflectionException;
 use Wakeapp\Component\Enumer\Exception\EnumNotRegisteredException;
+use function array_change_key_case;
+use function array_combine;
+use function sprintf;
 
-/**
- * Class EnumRegistry
- */
 class EnumRegistry
 {
     const TYPE_ORIGINAL = 'Original';
     const TYPE_COMBINE = 'Combine';
     const TYPE_COMBINE_NORMALIZE = 'CombineNormalize';
 
-    /** @var array[] */
+    /**
+     * @var array[]
+     */
     private $enumList;
 
     /**
@@ -49,9 +51,7 @@ class EnumRegistry
         $enum = $this->enumList[$enumClass][$type] ?? null;
 
         if ($enum === null) {
-            throw new EnumNotRegisteredException(
-                sprintf('Enum "%s" not registered.', $enumClass)
-            );
+            throw new EnumNotRegisteredException(sprintf('Enum type "%s" not registered.', $enumClass));
         }
 
         return $enum;

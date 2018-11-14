@@ -3,10 +3,10 @@
     "description": "Provides possibility for enum",
     "type":        "library",
     "keywords":    ["unique-id", "enumer"],
-    "license":     "proprietary",
+    "license":     "MIT",
 
     "require": {
-        "php": "~7.0",
+        "php":          "~7.1",
         "ext-mbstring": "*"
     },
 
