@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wakeapp\Component\Enumer\Example;
 
-/**
- * Class GenderEnum
- */
 class GenderEnum
 {
     const MALE = 'Male';

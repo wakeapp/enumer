@@ -1,5 +1,5 @@
 Enumer
-============
+======
 
 Введение
 --------
@@ -34,17 +34,14 @@ $enumer = new Enumer($enumRegistry);
 // Нормализация значения
 $enumer->normalize(GenderEnum::class, 'male');
 
-//Получеие списка 
+// Получеие списка 
 $enumer->getList(GenderEnum::class);
 
-//Получеие списка с ключами 
+// Получеие списка с ключами 
 $enumer->getCombineList(GenderEnum::class);
-
-//Получение бита
-$enumer->getEnumBit(GenderEnum::class, GenderEnum::MALE);
 ```
 
 Лицензия
 --------
 
-![license](https://img.shields.io/badge/License-proprietary-red.svg?style=flat-square)
+[![license](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](./LICENSE)

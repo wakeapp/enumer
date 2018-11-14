@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Wakeapp\Component\Enumer;
 
-/**
- * Class Enumer
- */
+use function is_string;
+use function mb_strtolower;
+
 class Enumer
 {
     /**
@@ -44,42 +44,14 @@ class Enumer
 
     /**
      * @param string $enumClass
-     * @param string $value
+     * @param string|int|float|null $value
      * @param bool $isConvertToLowercase
      *
-     * @return int
-     */
-    public function getEnumBit(string $enumClass, string $value, bool $isConvertToLowercase = true): int
-    {
-        $enum = $this->enumRegistry->getEnum($enumClass, EnumRegistry::TYPE_COMBINE_NORMALIZE);
-
-        if ($isConvertToLowercase) {
-            $value = mb_strtolower($value);
-        }
-
-        $index = 0;
-
-        foreach (array_keys($enum) as $constant) {
-            if ($constant === $value) {
-                return 1 << $index;
-            }
-
-            $index++;
-        }
-
-        return 0;
-    }
-
-    /**
-     * @param string $enumClass
-     * @param string $value
-     * @param bool $isConvertToLowercase
-     *
-     * @return null|string
+     * @return string|null
      */
     public function normalize(string $enumClass, $value, bool $isConvertToLowercase = true): ?string
     {
-        if ($isConvertToLowercase) {
+        if ($isConvertToLowercase && is_string($value)) {
             $value = mb_strtolower($value);
         }
 

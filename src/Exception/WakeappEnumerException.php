@@ -6,9 +6,6 @@ namespace Wakeapp\Component\Enumer\Exception;
 
 use RuntimeException;
 
-/**
- * Class WakeappEnumerException
- */
 class WakeappEnumerException extends RuntimeException
 {
 }
