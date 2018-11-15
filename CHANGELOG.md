@@ -1,6 +1,7 @@
-## [1.0.0] - 2018-11-14
+## [1.0.0] - 2018-11-15
 ### Added
 - Added information into `changelog`.
+- Added `LICENSE` file and information about license in every file.
 ### Changed
 - Changed license type to the `MIT`.
 - Removed redundant class comments.
