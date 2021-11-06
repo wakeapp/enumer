@@ -14,5 +14,6 @@
         "psr-4": {
             "Wakeapp\\Component\\Enumer\\": "src/"
         }
-    }
+    },
+    "abandoned": true
 }
